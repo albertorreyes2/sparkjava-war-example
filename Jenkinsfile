@@ -8,6 +8,7 @@ pipeline {
                 pwd
                 uname
                 docker ps
+                mvn clean install
                 '''
             }
         }
