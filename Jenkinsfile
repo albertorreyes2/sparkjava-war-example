@@ -19,7 +19,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh '''
                 echo "Do something 3"
+                docker cp /root/workspace/gustavoFolder/gustavoPipelinetarget/sparkjava-hello-world-1.0.war tomcat://usr/local/tomcat/webapps 
+                echo 'cp do'
+                '''
             }
         }
     }
